@@ -146,8 +146,7 @@ function resetUserInputForm () {
 function currentVocabularyCompareWith (userInputValue) {
   if (userInputValue=== currentVocabulary.eng.toLowerCase() ) {
     correctInputTime++;
-    responsiveVoice.speak(currentVocabulary.eng ); // đây nè
-    // Speaker.say(currentVocabulary.eng);. hú hú bé tâm ơi
+    responsiveVoice.speak(currentVocabulary.eng ); 
     $(".vocab").addClass("right-green");
   }
   else {
@@ -155,8 +154,7 @@ function currentVocabularyCompareWith (userInputValue) {
   }
 }
 
-let voicelist = responsiveVoice.getVoices();
-console.log(voicelist);
+
 
 
 function renderVocab () {
