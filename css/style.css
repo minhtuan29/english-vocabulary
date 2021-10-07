@@ -1,0 +1,74 @@
+* {
+  margin    : 0;
+  padding   : 0;
+  box-sizing: border-box;
+}
+
+body {
+  width          : 100%;
+  height         : 100vh;
+  display        : flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items    : center;
+  position: relative;
+  background     : url(../images/background.png) no-repeat top center/cover;
+}
+.container {
+  max-width: 1120px;
+  margin: 0 auto;
+  display: none;
+  position: fixed;
+  
+}
+.container .vocab {
+  color        : #888;
+  font-size    : 100px;
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.container input {
+ 
+  background-color: transparent;
+  font-size       : 50px;
+  outline         : none;
+  border          : none;
+  color           : white;
+  text-align: center;
+}
+
+.container .wrong-red {
+  color: rgb(255, 101, 101);
+
+}
+
+.container .right-green {
+  color: rgb(97, 255, 97);
+
+}
+
+#file {
+  opacity: 0;
+}
+label{
+
+  width: 150px;
+  font-size: 24px;
+  padding: 5px 10px;
+  text-align: center;
+  color: white;
+  background-color: goldenrod;
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#vi {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  display: none;
+}
