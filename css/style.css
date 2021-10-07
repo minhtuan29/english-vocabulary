@@ -23,7 +23,7 @@ body {
 }
 .container .vocab {
   color        : #888;
-  font-size    : 100px;
+  font-size    : 120px;
   margin-bottom: 50px;
   text-align: center;
 }
@@ -31,7 +31,7 @@ body {
 .container input {
  
   background-color: transparent;
-  font-size       : 50px;
+  font-size       : 80px;
   outline         : none;
   border          : none;
   color           : white;
