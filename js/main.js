@@ -12,12 +12,35 @@ const PITCH_AUDIO = 1;
 const RATE_AUDIO = 1; 
 const SPEAKER_LANGUAGE = 'en-US';
 
+const F2_KEY = 113;
+
 
 let VOCABULARIES;
 
 const vocabFileReader = new FileReader();
 
 
+
+var SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+var recognition = new SpeechRecognition();
+let userVoiceTextHTML = document.getElementById("voiceuser");
+
+recognition.onresult = function (e) {
+  var userVoiceText = e.results[0][0].transcript;
+  userVoiceTextHTML.innerText = "oh no, you said : " + userVoiceText;
+  if (userVoiceText.toLowerCase() === currentVocabulary.eng){
+    responsiveVoice.speak(currentVocabulary.eng ); 
+    $(".vocab").addClass("right-green");
+    resetUserInputForm();
+    userVoiceTextHTML.innerText = "";
+    if (correctInputTime === ENOUGH_CORRECT_TIME) {
+      goToNextRandomVocabulary();
+    }
+  }
+}
+
+
+let userVoiceHTML = document.getElementById("voiceUser");
 
 vocabFileReader.onload = () =>{
   VOCABULARIES = vocabFileReader.result.split('\r\n').map(getVocByLine);
@@ -62,6 +85,17 @@ $(document).on(
   (userInput) =>{
     if (userInput.keyCode === CTRL_KEY) {
       Speaker.say(currentVocabulary.eng);
+    }
+  }
+);
+
+
+$(document).on(
+  "keyup",
+  $('input[type="text"]'),
+  (userInput) =>{
+    if (userInput.keyCode === F2_KEY) {
+      recognition.start();
     }
   }
 );
@@ -136,6 +170,7 @@ function goToNextRandomVocabulary () {
 
 
 function resetUserInputForm () {
+  userVoiceTextHTML.innerText = "";
   setTimeout(
     () =>{
       $(".vocab").removeClass("wrong-red right-green");
