@@ -70,8 +70,10 @@ $(document).on(
           soLanNhanShift++;
           if(soLanNhanShift === 1){
             thongBao2.innerText = "good, bấm shift một lần nữa để ẩn nghĩa";
+          }else{
+            thongBao2.innerText = "good, hãy nhấn F2 sau đó phát âm từ vựng ở trên, giả vờ nói sai trước";
           }
-          thongBao2.innerText = "good, hãy nhấn F2 sau đó phát âm từ vựng ở trên, giả vờ nói sai trước";
+          
         $("#vi").slideToggle();
       }
     }
