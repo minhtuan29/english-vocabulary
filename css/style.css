@@ -73,6 +73,7 @@ body {
   position: absolute;
   top: 10%;
   left: 50%;
+  font-size: 50px;
   transform: translateX(-50%);
   z-index: 10;
   display: none;
