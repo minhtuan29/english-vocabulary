@@ -3,6 +3,7 @@ const ENTER_KEY = 13;
 const ENOUGH_CORRECT_TIME = 2;
 const SHIFT_KEY = 16;
 const CTRL_KEY = 17;
+const F2_KEY = 113;
 
 const VOLUME = 5;
 const VOICE_URI = "native";
@@ -20,6 +21,32 @@ let thongBao2 = document.getElementById("thongbao2");
 let VOCABULARIES = [{eng:"student", vi:"học sinh"}, {eng:"teacher", vi:"giáo viên"}];
 
 let soLanNhanShift = 0;
+
+
+
+
+
+
+var SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+var recognition = new SpeechRecognition();
+let userVoiceTextHTML = document.getElementById("voiceuser");
+
+recognition.onresult = function (e) {
+  var userVoiceText = e.results[0][0].transcript;
+  userVoiceTextHTML.innerText = "oh no, you said : " + userVoiceText + " , let's try F2 again";
+  if (userVoiceText.toLowerCase() === currentVocabulary.eng){
+    thongBao2.innerText = "yeah, hoàn thành khóa học";
+    responsiveVoice.speak(currentVocabulary.eng ); 
+    $(".vocab").addClass("right-green");
+    resetUserInputForm();
+    userVoiceTextHTML.innerText = "";
+    if (correctInputTime === ENOUGH_CORRECT_TIME) {
+      goToNextVocabulary();
+    }
+  }
+}
+
+
 
 
 $(".container").css("display", "block");
@@ -44,7 +71,7 @@ $(document).on(
           if(soLanNhanShift === 1){
             thongBao2.innerText = "rất tốt, bấm shift một lần nữa để ẩn nghĩa";
           }else{
-            thongBao2.innerText = "Hoàn thành hướng dẫn. Chúc mừng bạn \n Hiện tại phần mềm này đang phát triển \nthành một phần mềm học tiếng anh chuyên nghiệp\n Mong các bạn đóng góp thêm ";
+            thongBao2.innerText = "rất tốt, bây h hãy nhấn F2 sau dó phát vào microphone từ vựng ở trên";
           }
         
         $("#vi").slideToggle();
@@ -104,6 +131,15 @@ $(document).on(
   );
 
 
+  $(document).on(
+    "keyup",
+    $('input[type="text"]'),
+    (userInput) =>{
+      if (userInput.keyCode === F2_KEY) {
+        recognition.start();
+      }
+    }
+  );
 
 
 
