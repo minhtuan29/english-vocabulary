@@ -23,14 +23,14 @@ body {
 }
 .container .vocab {
   color        : #888;
-  font-size    : 120px;
+  font-size    : 100px;
   margin-bottom: 50px;
   text-align: center;
 }
 
 .container input {
   background-color: transparent;
-  font-size       : 80px;
+  font-size       : 65px;
   outline         : none;
   border          : none;
   color           : white;
@@ -80,8 +80,8 @@ body {
 }
 
 .thongbao{
-  font-size: 30px; 
+  font-size: 25px; 
   color: white; 
   position: relative; 
-  top: 350px;
+  top: 300px;
 }
