@@ -23,9 +23,14 @@ let VOCABULARIES = [{eng:"student", vi:"học sinh"}, {eng:"teacher", vi:"giáo 
 let soLanNhanShift = 0;
 
 
-
-
-
+class Sound{
+  static audio = new Audio();
+  static play(path){
+    Sound.audio.src = path;
+    Sound.audio.play();
+  }
+}
+Sound.play("./sound/haygostudennhanenter.mp3");
 
 var SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
 var recognition = new SpeechRecognition();
@@ -34,8 +39,10 @@ let userVoiceTextHTML = document.getElementById("voiceuser");
 recognition.onresult = function (e) {
   var userVoiceText = e.results[0][0].transcript;
   userVoiceTextHTML.innerText = "oh no, you said : " + userVoiceText + " , let's try F2 again";
+  Sound.play("./sound/nhanf2again.mp3")
   if (userVoiceText.toLowerCase() === currentVocabulary.eng){
     thongBao2.innerText = "yeah, hoàn thành khóa học";
+    Sound.play("./sound/chucmung.mp3")
     responsiveVoice.speak(currentVocabulary.eng ); 
     $(".vocab").addClass("right-green");
     resetUserInputForm();
@@ -70,8 +77,10 @@ $(document).on(
           soLanNhanShift++;
           if(soLanNhanShift === 1){
             thongBao2.innerText = "good, bấm shift một lần nữa để ẩn nghĩa";
+            Sound.play("./sound/anshiftmotlannua.mp3");
           }else{
             thongBao2.innerText = "good, hãy nhấn F2 sau đó phát âm từ vựng ở trên, giả vờ nói sai trước";
+            Sound.play("./sound/nhanphimf2.mp3")
           }
           
         $("#vi").slideToggle();
@@ -89,6 +98,7 @@ $(document).on(
         $("#thongbao").css("display", "none");
         thongBao2.innerText = "rất tốt, hãy thử bấm shift nếu bạn quên từ này nghĩa gì";
         Speaker.say(currentVocabulary.eng);
+        Sound.play("./sound/bamshiftneuquen.mp3");
       }
     }
   );
@@ -110,22 +120,19 @@ $(document).on(
   );
 
 
-  $(document).on(
-    "keyup",
-    $('input[type="text"]'),
-    (userInput) =>{
-      if(correctInputTime == 2){
-        thongBao.innerText = "good, hãy bấm thử nút Ctrl để nói giọng khác";
-      }
-    }
-  );
+
 
   $(document).on(
     "keyup",
     $('input[type="text"]'),
     (userInput) =>{
-      if(correctInputTime == 1){
+      if(correctInputTime === 1){
           thongBao.innerText = "good, hãy gõ thêm một lần nữa để qua từ mới";
+          Sound.play("./sound/go1lannua.mp3")
+      }
+      if(correctInputTime === 2 && userInput.keyCode !== CTRL_KEY && userInput.keyCode !== SHIFT_KEY && userInput.keyCode !== F2_KEY ){
+        Sound.play("./sound/ctrl1.mp3");
+        thongBao.innerText = "good, hãy bấm thử nút Ctrl để nói giọng khác";
       }
     }
   );
@@ -160,7 +167,6 @@ class Speaker{
       window.speechSynthesis.speak(Speaker.main);
     }
   }
-  
   
   
   
