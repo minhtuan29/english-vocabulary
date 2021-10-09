@@ -69,11 +69,9 @@ $(document).on(
       if (userInput.keyCode === SHIFT_KEY) {
           soLanNhanShift++;
           if(soLanNhanShift === 1){
-            thongBao2.innerText = "rất tốt, bấm shift một lần nữa để ẩn nghĩa";
-          }else{
-            thongBao2.innerText = "rất tốt, bây h hãy nhấn F2 sau dó phát âm từ vựng ở trên";
+            thongBao2.innerText = "good, bấm shift một lần nữa để ẩn nghĩa";
           }
-        
+          thongBao2.innerText = "good, hãy nhấn F2 sau đó phát âm từ vựng ở trên, giả vờ nói sai trước";
         $("#vi").slideToggle();
       }
     }
@@ -115,7 +113,7 @@ $(document).on(
     $('input[type="text"]'),
     (userInput) =>{
       if(correctInputTime == 2){
-        thongBao.innerText = "oke, bây giờ hãy bấm thử nút Ctrl để nói giọng khác";
+        thongBao.innerText = "good, hãy bấm thử nút Ctrl để nói giọng khác";
       }
     }
   );
@@ -125,7 +123,7 @@ $(document).on(
     $('input[type="text"]'),
     (userInput) =>{
       if(correctInputTime == 1){
-          thongBao.innerText = "rất tốt, hãy gõ thêm một lần nữa để qua từ mới";
+          thongBao.innerText = "good, hãy gõ thêm một lần nữa để qua từ mới";
       }
     }
   );
