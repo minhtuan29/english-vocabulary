@@ -23,6 +23,7 @@ vocabFileReader.onload = () =>{
   VOCABULARIES = vocabFileReader.result.split('\r\n').map(getVocByLine);
   renderVocab(); 
   $(".file").css("display", "none");
+  $("p").css("display", "none");
   $(".container").css("display", "block");
   $(".input-text").focus();
   document.getElementById("tutorial-el").innerText = "";
@@ -80,6 +81,9 @@ $(document).on(
     }
   }
 );
+
+
+
 
 
 
@@ -161,4 +165,9 @@ function renderVocab () {
   currentVocabulary = getRandomVocab();
   $(".vocab").html(currentVocabulary.eng);
   viMeaningHTML.innerText = currentVocabulary.vi;
+}
+
+
+function goTo(link){
+  location = link;
 }

@@ -29,7 +29,6 @@ body {
 }
 
 .container input {
- 
   background-color: transparent;
   font-size       : 80px;
   outline         : none;
@@ -45,25 +44,30 @@ body {
 
 .container .right-green {
   color: rgb(97, 255, 97);
-
 }
 
 
-#file {
+#file{
   opacity: 0;
 }
-label{
 
-  width: 150px;
-  font-size: 24px;
+
+.nutbam{
+  border: solid black 2px;
+  opacity: 0.8;
+  font-size: 20px;
   padding: 5px 10px;
   text-align: center;
-  color: white;
-  background-color: goldenrod;
+  color: rgb(32, 32, 32);
+  background-color: rgb(181, 255, 206);
   font-weight: bold;
   border-radius: 4px;
   cursor: pointer;
 }
+.nutbam:hover{
+  opacity: 1;
+}
+
 
 #vi {
   position: absolute;
@@ -72,4 +76,11 @@ label{
   transform: translateX(-50%);
   z-index: 10;
   display: none;
+}
+
+.thongbao{
+  font-size: 30px; 
+  color: white; 
+  position: relative; 
+  top: 380px;
 }
