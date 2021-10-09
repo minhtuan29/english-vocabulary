@@ -71,7 +71,7 @@ $(document).on(
           if(soLanNhanShift === 1){
             thongBao2.innerText = "rất tốt, bấm shift một lần nữa để ẩn nghĩa";
           }else{
-            thongBao2.innerText = "rất tốt, bây h hãy nhấn F2 sau dó phát vào microphone từ vựng ở trên";
+            thongBao2.innerText = "rất tốt, bây h hãy nhấn F2 sau dó phát âm từ vựng ở trên";
           }
         
         $("#vi").slideToggle();
