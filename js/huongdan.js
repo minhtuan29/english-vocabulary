@@ -44,7 +44,7 @@ $(document).on(
           if(soLanNhanShift === 1){
             thongBao2.innerText = "rất tốt, bấm shift một lần nữa để ẩn nghĩa";
           }else{
-            thongBao2.innerText = "hoàn thành hướng dẫn. Chúc mừng bạn";
+            thongBao2.innerText = "Hoàn thành hướng dẫn. Chúc mừng bạn \n Hiện tại phần mềm này đang phát triển \nthành một phần mềm học tiếng anh chuyên nghiệp\n Mong các bạn đóng góp thêm ";
           }
         
         $("#vi").slideToggle();
