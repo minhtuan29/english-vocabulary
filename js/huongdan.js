@@ -32,14 +32,18 @@ class Sound{
 }
 Sound.play("./sound/haygostudennhanenter.mp3");
 
+
 var SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
 var recognition = new SpeechRecognition();
 let userVoiceTextHTML = document.getElementById("voiceuser");
 
+
+
 recognition.onresult = function (e) {
   var userVoiceText = e.results[0][0].transcript;
   userVoiceTextHTML.innerText = "oh no, you said : " + userVoiceText + " , let's try F2 again";
-  Sound.play("./sound/nhanf2again.mp3")
+  Sound.play("./sound/nhanf2again.mp3");
+
   if (userVoiceText.toLowerCase() === currentVocabulary.eng){
     thongBao2.innerText = "yeah, hoàn thành khóa học";
     Sound.play("./sound/chucmung.mp3")

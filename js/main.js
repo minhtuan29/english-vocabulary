@@ -46,7 +46,6 @@ vocabFileReader.onload = () =>{
   VOCABULARIES = VOCABULARIES.filter( function(element){
     return element.eng !== '';
   });
-  console.log(VOCABULARIES);
   renderVocab(); 
   $(".file").css("display", "none");
   $("p").css("display", "none");
