@@ -76,10 +76,10 @@ $(document).on(
       if (userInput.keyCode === SHIFT_KEY) {
           soLanNhanShift++;
           if(soLanNhanShift === 1){
-            thongBao2.innerText = "good, bấm shift một lần nữa để ẩn nghĩa";
+            thongBao2.innerText = "bấm shift một lần nữa để ẩn";
             Sound.play("./sound/anshiftmotlannua.mp3");
           }else{
-            thongBao2.innerText = "good, hãy nhấn F2 sau đó phát âm từ vựng ở trên, giả vờ nói sai trước";
+            thongBao2.innerText = "nếu muốn nhập bằng cách phát âm, ấn phím F2, sau đó phát âm";
             Sound.play("./sound/nhanphimf2.mp3")
           }
           
@@ -96,7 +96,7 @@ $(document).on(
     (userInput) =>{
       if (userInput.keyCode === CTRL_KEY) {
         $("#thongbao").css("display", "none");
-        thongBao2.innerText = "rất tốt, hãy thử bấm shift nếu bạn quên từ này nghĩa gì";
+        thongBao2.innerText = "nếu quên nghĩa, bấm shift để hiện";
         Speaker.say(currentVocabulary.eng);
         Sound.play("./sound/bamshiftneuquen.mp3");
       }
@@ -127,12 +127,12 @@ $(document).on(
     $('input[type="text"]'),
     (userInput) =>{
       if(correctInputTime === 1){
-          thongBao.innerText = "good, hãy gõ thêm một lần nữa để qua từ mới";
+          thongBao.innerText = "nhập 2 lần đúng mới qua từ mới. Hãy nhập lại 1 lần nữa";
           Sound.play("./sound/go1lannua.mp3")
       }
       if(correctInputTime === 2 && userInput.keyCode !== CTRL_KEY && userInput.keyCode !== SHIFT_KEY && userInput.keyCode !== F2_KEY ){
         Sound.play("./sound/ctrl1.mp3");
-        thongBao.innerText = "good, hãy bấm thử nút Ctrl để nói giọng khác";
+        thongBao.innerText = "bấm nút Ctrl dùng để nghe cách phát âm";
       }
     }
   );
