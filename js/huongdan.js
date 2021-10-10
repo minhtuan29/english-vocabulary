@@ -153,6 +153,8 @@ $(document).on(
 
 
 
+
+
 class Speaker{
     static main = new SpeechSynthesisUtterance();
     static config(){
@@ -207,6 +209,10 @@ class Speaker{
     else {
       $(".vocab").addClass("wrong-red");
     }
+  }
+
+  function goTo(link){
+    location = link;
   }
   
   

@@ -85,3 +85,13 @@ body {
   position: relative; 
   top: 300px;
 }
+
+i{
+  font-size: 60px;
+  color: darkgray;
+  opacity: 0.2;
+}
+
+i:hover{
+  opacity: 0.8;
+}
