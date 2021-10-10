@@ -11,12 +11,10 @@ const VOICE_URI = "native";
 const PITCH_AUDIO = 1;
 const RATE_AUDIO = 1; 
 const SPEAKER_LANGUAGE = 'en-US';
-
 const F2_KEY = 113;
 
 
 let VOCABULARIES;
-
 const vocabFileReader = new FileReader();
 
 
@@ -25,10 +23,12 @@ var SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecogniti
 var recognition = new SpeechRecognition();
 let userVoiceTextHTML = document.getElementById("voiceuser");
 
+
 recognition.onresult = function (e) {
   var userVoiceText = e.results[0][0].transcript;
   userVoiceTextHTML.innerText = "oh no, you said : " + userVoiceText;
   if (userVoiceText.toLowerCase() === currentVocabulary.eng){
+    correctInputTime++;
     responsiveVoice.speak(currentVocabulary.eng ); 
     $(".vocab").addClass("right-green");
     resetUserInputForm();
@@ -40,7 +40,6 @@ recognition.onresult = function (e) {
 }
 
 
-let userVoiceHTML = document.getElementById("voiceUser");
 
 vocabFileReader.onload = () =>{
   VOCABULARIES = vocabFileReader.result.split('\r\n').map(getVocByLine);
