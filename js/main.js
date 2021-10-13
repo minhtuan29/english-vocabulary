@@ -47,7 +47,7 @@ vocabFileReader.onload = () =>{
     return element.eng !== '';
   });
   renderVocab(); 
-  $("#ytb-el").css("display", "none");
+  $("iframe").css("display", "none");
   $(".file").css("display", "none");
   $("p").css("display", "none");
   $(".container").css("display", "block");
