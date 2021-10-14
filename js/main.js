@@ -12,6 +12,10 @@ const PITCH_AUDIO = 1;
 const RATE_AUDIO = 1; 
 const SPEAKER_LANGUAGE = 'en-US';
 const F2_KEY = 113;
+const LEFT_KEY = 37;
+const RIGHT_KEY = 39;
+const DOWN_KEY = 40;
+const UP_KEY = 38;
 
 
 let VOCABULARIES;
@@ -86,8 +90,40 @@ $(document).on(
   "keyup",
   $('input[type="text"]'),
   (userInput) =>{
-    if (userInput.keyCode === CTRL_KEY) {
+    if (userInput.keyCode === CTRL_KEY || userInput.keyCode === RIGHT_KEY) {
       Speaker.say(currentVocabulary.eng);
+    }
+  }
+);
+
+$(document).on(
+  "keyup",
+  $('input[type="text"]'),
+  (userInput) =>{
+    if ( userInput.keyCode === LEFT_KEY) {
+      responsiveVoice.speak(currentVocabulary.eng); 
+    }
+  }
+);
+
+$(document).on(
+  "keyup",
+  $('input[type="text"]'),
+  (userInput) =>{
+    if ( userInput.keyCode === DOWN_KEY) {
+      goToNextRandomVocabulary();
+     
+    }
+  }
+);
+
+
+$(document).on(
+  "keyup",
+  $('input[type="text"]'),
+  (userInput) =>{
+    if ( userInput.keyCode === UP_KEY) {
+      $("#vi").css("top", "600px");
     }
   }
 );
@@ -118,6 +154,7 @@ $(document).on(
     }
   }
 );
+
 
 
 
