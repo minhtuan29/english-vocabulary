@@ -1,3 +1,3 @@
 # english-vocabulary
 Visit the link to use:
-https://minhtuan29.github.io/learning-vocabulary-software-FEbasic/
+https://minhtuan29.github.io/english-vocabulary/
