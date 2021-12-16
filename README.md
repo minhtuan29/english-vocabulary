@@ -5,3 +5,7 @@ I learn basic frontend as the beginning to become a web developer. With everythi
 
 Visit the link to use software online:
 https://minhtuan29.github.io/english-vocabulary/
+
+# License
+ MIT License
+Copyright (c) 2021 TuanHoang 
