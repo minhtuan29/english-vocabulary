@@ -12,7 +12,8 @@ After completing instruction, you go back to menu
 
 # Instruct use
 - step 1: create a file .txt or file .doc in your computer, includes your vocabularies and sentences as form below  
- ![11](https://user-images.githubusercontent.com/86332370/146687718-8f3ccad9-a7d2-4cb0-9412-76e5ab56e736.PNG)
+![1](https://user-images.githubusercontent.com/86332370/146687942-bc82dca8-7852-42fb-b946-a11ba66a0527.PNG)
+
 
 
 - step 2: click on "nạp file từ vựng" and select the file to load  
