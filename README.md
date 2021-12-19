@@ -21,5 +21,4 @@ After completing instruction, you go back to menu
 - step 3: do practice  
 
 # License
- MIT License
-MIT Copyright (©) 2021 TuanHoang 
+ MIT License Copyright (©) 2021 TuanHoang 
