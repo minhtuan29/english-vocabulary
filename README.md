@@ -1,5 +1,5 @@
 
-# The software for learning English by HTML CSS JavaScript  
+# The software for learning English 
 Visit this link to use software online: https://minhtuan29.github.io/english-vocabulary/  
 This software cannot be used on mobile phones, forgive me.  
   
