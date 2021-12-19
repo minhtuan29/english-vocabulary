@@ -10,7 +10,7 @@ After completing instruction, you go back to menu
 ![a](https://user-images.githubusercontent.com/86332370/146687293-790fb389-3dd1-449c-8597-952c7bdadc18.png)  
 
 # Instruct use
-- step 1: create a file .txt or file .doc in your computer, includes your vocabularies and sentences that you want to practice as form below  
+- step 1: create a file .txt or file .doc in your computer, includes your vocabularies and sentences as form below  
 ![1](https://user-images.githubusercontent.com/86332370/146686650-0a4cad7b-eab2-43a7-b141-a7dc922276b9.PNG)  
 
 - step 2: click on "nạp file từ vựng" and select the file to load  
