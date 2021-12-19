@@ -14,4 +14,4 @@ First, you should click on "hướng dẫn lần đầu sử dụng" to get how 
 - step 3: do practice
 # License
  MIT License
-Copyright (c) 2021 TuanHoang 
+MIT Copyright (©) 2021 TuanHoang 
