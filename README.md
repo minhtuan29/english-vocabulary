@@ -7,7 +7,7 @@ First, you should click on "hướng dẫn lần đầu sử dụng" to get how 
 ![232323](https://user-images.githubusercontent.com/86332370/146686750-2c29e8cb-3457-4b6d-98c0-f46506da4ccc.PNG)
 
 # Instruct use
-- step 1: create a file .txt in your computer, includes your vocabularies or sentences to practice as form below  
+- step 1: create a file .txt(or .doc) in your computer, includes your vocabularies or sentences to practice as form below  
 ![1](https://user-images.githubusercontent.com/86332370/146686650-0a4cad7b-eab2-43a7-b141-a7dc922276b9.PNG)  
 
 - step 2: click on "nạp file từ vựng" and choose the file to load  
