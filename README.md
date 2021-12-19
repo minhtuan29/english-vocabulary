@@ -4,7 +4,10 @@ Visit this link to use software online: https://minhtuan29.github.io/english-voc
 This software cannot be used on mobile phones, forgive me.  
   
 First, you should click on "hướng dẫn lần đầu sử dụng" to get how to use  
-![232323](https://user-images.githubusercontent.com/86332370/146686750-2c29e8cb-3457-4b6d-98c0-f46506da4ccc.PNG)
+![232323](https://user-images.githubusercontent.com/86332370/146686750-2c29e8cb-3457-4b6d-98c0-f46506da4ccc.PNG)  
+
+Ffter completing instruction, you go back to menu  
+![a](https://user-images.githubusercontent.com/86332370/146687293-790fb389-3dd1-449c-8597-952c7bdadc18.png)  
 
 # Instruct use
 - step 1: create a file .txt or file .doc in your computer, includes your vocabularies and sentences to practice as form below  
