@@ -7,7 +7,8 @@ First, you should click on "hướng dẫn lần đầu sử dụng" to get how 
 ![232323](https://user-images.githubusercontent.com/86332370/146686750-2c29e8cb-3457-4b6d-98c0-f46506da4ccc.PNG)  
 
 After completing instruction, you go back to menu  
-![a](https://user-images.githubusercontent.com/86332370/146687293-790fb389-3dd1-449c-8597-952c7bdadc18.png)  
+![a](https://user-images.githubusercontent.com/86332370/146687624-fd020c61-7c87-4e74-bc32-8bc6e4ac75ba.png)  
+
 
 # Instruct use
 - step 1: create a file .txt or file .doc in your computer, includes your vocabularies and sentences as form below  
