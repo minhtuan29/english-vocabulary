@@ -6,7 +6,7 @@ This software cannot be used on mobile phones, forgive me.
 First, you should click on "hướng dẫn lần đầu sử dụng" to get how to use  
 ![232323](https://user-images.githubusercontent.com/86332370/146686750-2c29e8cb-3457-4b6d-98c0-f46506da4ccc.PNG)  
 
-After completing instruction, you go back to menu  
+After completing instruction, get back to menu  
 ![a](https://user-images.githubusercontent.com/86332370/146687624-fd020c61-7c87-4e74-bc32-8bc6e4ac75ba.png)  
 
 
