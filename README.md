@@ -22,4 +22,4 @@ After completing instruction, get back to menu
 - step 3: do practice  
 
 # License
- MIT License Copyright (©) 2021 TuanHoang 
+ [MIT License](https://github.com/minhtuan29/english-vocabulary/blob/master/LICENSE) Copyright (©) 2021 TuanHoang 
