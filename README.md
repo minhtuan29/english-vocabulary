@@ -10,7 +10,7 @@ After completing instruction, get back to menu
 ![a](https://user-images.githubusercontent.com/86332370/146687624-fd020c61-7c87-4e74-bc32-8bc6e4ac75ba.png)  
 
 
-# Instruct use
+# Usage
 - step 1: create a file .txt or file .doc in your computer, includes your vocabularies and sentences as form following  
 ![1](https://user-images.githubusercontent.com/86332370/146687942-bc82dca8-7852-42fb-b946-a11ba66a0527.PNG)
 
