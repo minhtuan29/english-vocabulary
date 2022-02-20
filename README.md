@@ -23,11 +23,3 @@ After completing instruction, get back to menu
 
 # License
  [MIT License](https://github.com/minhtuan29/english-vocabulary/blob/master/LICENSE) Copyright (©) 2021 TuanHoang 
-
-# features
-- Xay dung luong di huong dan su dung co tuong tac thuc
-- Doc file va xu ly file de tao chuong trinh hoc tu vung
-- Thao tac phat am va ghi am, xu ly van noi
-- Kiem tra dung sai hop le
-- Xay dung nhieu option cho input hop le
-- 
