@@ -23,3 +23,5 @@ After completing instruction, get back to menu
 
 # License
  [MIT License](https://github.com/minhtuan29/english-vocabulary/blob/master/LICENSE) Copyright (©) 2021 TuanHoang 
+ # Author
+HOANG MINH TUAN - N18DCPT061 PTIT HCM SOFTWAREENGINEER
