@@ -24,7 +24,6 @@ After completing instruction, get back to menu
 - Ctrl
 - Shift
 - F2
-- Up Key
 - Down Key
 - Left Key
 - Right Key
