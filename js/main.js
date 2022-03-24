@@ -146,7 +146,7 @@ $(document).on(
   $('input[type="text"]'),
   (userInput) =>{
     if (userInput.keyCode === ENTER_KEY) {
-      currentVocabularyCompareWith($('input[type="text"]').val());
+      currentVocabularyCompareWith($('input[type="text"]').val().trim().toLowerCase());
       resetUserInputForm();
       if (correctInputTime === ENOUGH_CORRECT_TIME) {
         goToNextRandomVocabulary();
@@ -165,7 +165,7 @@ $(document).on(
 
 function getVocByLine(line){
   let words = line.split(':');
-  return {eng: words[0].trim(), vi: words[1].trim()};
+  return {eng: words[0].trim().toLowerCase(), vi: words[1].trim().toLowerCase()};
 }
 
 
