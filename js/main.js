@@ -164,8 +164,8 @@ $(document).on(
 //==========================PROGRAM FILE==================================
 
 function getVocByLine(line){
-  let words = line.split(': ');
-  return {eng: words[0], vi: words[1]};
+  let words = line.split(':');
+  return {eng: words[0].trim(), vi: words[1].trim()};
 }
 
 
