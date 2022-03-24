@@ -12,8 +12,7 @@ After completing instruction, get back to menu
 
 # Usage
 - step 1: create a file .txt or file .doc in your computer, includes your vocabularies and sentences as form following  
-![1](https://user-images.githubusercontent.com/86332370/146687942-bc82dca8-7852-42fb-b946-a11ba66a0527.PNG)
-
+![vocs](https://user-images.githubusercontent.com/86332370/159900878-826c2191-d9fd-4ba9-a215-347619a34ef5.PNG)
 
 
 - step 2: click on "nạp file từ vựng" and select the file to load  
