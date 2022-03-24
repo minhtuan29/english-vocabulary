@@ -20,7 +20,14 @@ After completing instruction, get back to menu
 ![3232323](https://user-images.githubusercontent.com/86332370/146686530-d77f5808-d9c2-488e-9e71-c24f6e9347f0.PNG)  
 
 - step 3: do practice  
-
+## Keys in use
+- Ctrl
+- Shift
+- F2
+- Up Key
+- Down Key
+- Left Key
+- Right Key
 # License
  [MIT License](https://github.com/minhtuan29/english-vocabulary/blob/master/LICENSE) Copyright (©) 2021 TuanHoang 
  # Author
