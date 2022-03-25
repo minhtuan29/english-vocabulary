@@ -46,7 +46,24 @@ recognition.onresult = function (e) {
 
 
 vocabFileReader.onload = () =>{
-  VOCABULARIES = vocabFileReader.result.split('\r\n').map(getVocByLine);
+  
+  lines = vocabFileReader.result.split('\n');
+
+  let wordsByLine = [];
+  for(line of lines){
+    if(line.length > 1){
+      if(!line.includes(":")){
+        alert("chú ý, có vẻ có một hàng nào đó bạn quên nhập ký tự ':'");
+        vocabFileReader = new FileReader();
+        return;
+      }else{
+        wordsByLine.push(line);
+      }
+    }
+  }
+
+  VOCABULARIES = wordsByLine.map(getVocByLine);
+ 
   VOCABULARIES = VOCABULARIES.filter( function(element){
     return element.eng !== '';
   });
