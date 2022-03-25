@@ -54,7 +54,7 @@ vocabFileReader.onload = () =>{
     if(line.length > 1){
       if(!line.includes(":")){
         alert("chú ý, có vẻ có một hàng nào đó bạn quên nhập ký tự ':'");
-        vocabFileReader = new FileReader();
+        location.reload();
         return;
       }else{
         wordsByLine.push(line);
