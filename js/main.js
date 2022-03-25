@@ -18,25 +18,23 @@ const DOWN_KEY = 40;
 const UP_KEY = 38;
 
 
-let VOCABULARIES;
-const vocabFileReader = new FileReader();
 
 
 
-var SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
-var recognition = new SpeechRecognition();
+
+let SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+let recognition = new SpeechRecognition();
 let userVoiceTextHTML = document.getElementById("voiceuser");
 
 
-recognition.onresult = function (e) {
-  var userVoiceText = e.results[0][0].transcript;
+
+recognition.onresult = function (input) {
+  let userVoiceText = input.results[0][0].transcript;
   userVoiceTextHTML.innerText = "oh no, you said : " + userVoiceText;
   if (userVoiceText.toLowerCase() === currentVocabulary.eng){
     correctInputTime++;
     responsiveVoice.speak(currentVocabulary.eng ); 
-    $(".vocab").addClass("right-green");
-    resetUserInputForm();
-    userVoiceTextHTML.innerText = "";
+    setNewFrameForRightInput();
     if (correctInputTime === ENOUGH_CORRECT_TIME) {
       goToNextRandomVocabulary();
     }
@@ -44,18 +42,31 @@ recognition.onresult = function (e) {
 }
 
 
+function setNewFrameForRightInput(){
+  $(".vocab").addClass("right-green");
+  resetUserInputForm();
+  userVoiceTextHTML.innerText = "";
+}
+
+
+
+
+
+
+
+let VOCABULARIES = [];
+
+const vocabFileReader = new FileReader();
 
 vocabFileReader.onload = () =>{
-  
   lines = vocabFileReader.result.split('\n');
 
   let wordsByLine = [];
   for(line of lines){
     if(line.length > 1){
-      if(!line.includes(":")){
+      if (!line.includes(":") ){
         alert("chú ý, có vẻ có một hàng nào đó bạn quên nhập ký tự ':'");
         location.reload();
-        return;
       }else{
         wordsByLine.push(line);
       }
@@ -64,10 +75,18 @@ vocabFileReader.onload = () =>{
 
   VOCABULARIES = wordsByLine.map(getVocByLine);
  
-  VOCABULARIES = VOCABULARIES.filter( function(element){
-    return element.eng !== '';
-  });
   renderVocab(); 
+  setFrameToStarPractice();
+}
+
+
+
+
+
+
+
+
+function setFrameToStarPractice(){
   $("iframe").css("display", "none");
   $(".file").css("display", "none");
   $("p").css("display", "none");
@@ -76,6 +95,9 @@ vocabFileReader.onload = () =>{
   document.getElementById("tutorial-el").innerText = "";
 }
 
+
+
+
 const inputTxtFile = document.querySelector('input[type="file"]');
 inputTxtFile.addEventListener(
   'change',
@@ -83,10 +105,16 @@ inputTxtFile.addEventListener(
 );
 
 
+
+
 let viMeaningHTML = document.getElementById("vi");
 
 let currentVocabulary;
 let correctInputTime = 0;
+
+
+
+
 
 //==========================RUN FILE============================================
 
@@ -103,6 +131,7 @@ $(document).on(
 
 
 
+
 $(document).on(
   "keyup",
   $('input[type="text"]'),
@@ -112,6 +141,9 @@ $(document).on(
     }
   }
 );
+
+
+
 
 $(document).on(
   "keyup",
@@ -123,16 +155,18 @@ $(document).on(
   }
 );
 
+
+
 $(document).on(
   "keyup",
   $('input[type="text"]'),
   (userInput) =>{
     if ( userInput.keyCode === DOWN_KEY) {
       goToNextRandomVocabulary();
-     
     }
   }
 );
+
 
 
 $(document).on(
@@ -144,6 +178,7 @@ $(document).on(
     }
   }
 );
+
 
 
 $(document).on(
@@ -163,7 +198,7 @@ $(document).on(
   $('input[type="text"]'),
   (userInput) =>{
     if (userInput.keyCode === ENTER_KEY) {
-      currentVocabularyCompareWith($('input[type="text"]').val().trim().toLowerCase());
+      currentVocabularyCompareWith($('input[type="text"]').val().trim());
       resetUserInputForm();
       if (correctInputTime === ENOUGH_CORRECT_TIME) {
         goToNextRandomVocabulary();
@@ -182,8 +217,13 @@ $(document).on(
 
 function getVocByLine(line){
   let words = line.split(':');
+  if(words[0]==='' || words[1]===''){
+    alert("có lẽ bạn quên nhập nghĩa cho một vài từ nào đó, hãy kiểm tra lại");
+    location.reload();
+  }
   return {eng: words[0].trim().toLowerCase(), vi: words[1].trim().toLowerCase()};
 }
+
 
 
 
@@ -205,9 +245,11 @@ class Speaker{
 
 
 
+
 function getRandomVocab() {
   return VOCABULARIES[Math.floor(Math.random() * VOCABULARIES.length)];
 } 
+
 
 
 
@@ -226,6 +268,7 @@ function goToNextRandomVocabulary () {
 
 
 
+
 function resetUserInputForm () {
   userVoiceTextHTML.innerText = "";
   setTimeout(
@@ -236,6 +279,7 @@ function resetUserInputForm () {
     DELAY_TIME_OUT
   );
 }
+
 
 
 
@@ -258,6 +302,8 @@ function renderVocab () {
   $(".vocab").html(currentVocabulary.eng);
   viMeaningHTML.innerText = currentVocabulary.vi;
 }
+
+
 
 
 function goTo(link){
