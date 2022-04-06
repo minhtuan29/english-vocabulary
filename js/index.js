@@ -214,14 +214,21 @@ $(document).on(
 
 
 //==========================PROGRAM FILE==================================
+function inValidWord(word){
+  if(word .trim() === '' || word === undefined || word === null){
+    return true;
+  }
+  return false;
+}
+
 
 function getVocByLine(line){
-  let words = line.split(':');
-  if(words[0]==='' || words[1]===''){
+  let twoWords = line.split(':');
+  if(inValidWord(twoWords[0]) || inValidWord(twoWords[1]) ){
     alert("có lẽ bạn quên nhập nghĩa cho một vài từ nào đó, hãy kiểm tra lại");
     location.reload();
   }
-  return {eng: words[0].trim().toLowerCase(), vi: words[1].trim().toLowerCase()};
+  return {eng: twoWords[0].trim().toLowerCase(), vi: twoWords[1].trim().toLowerCase()};
 }
 
 
