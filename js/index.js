@@ -30,7 +30,6 @@ let userVoiceTextHTML = document.getElementById("voiceuser");
 
 recognition.onresult = function (input) {
   let userVoiceText = input.results[0][0].transcript;
-  userVoiceTextHTML.innerText = "oh no, you said : " + userVoiceText;
   if (userVoiceText.toLowerCase() === currentVocabulary.eng){
     correctInputTime++;
     responsiveVoice.speak(currentVocabulary.eng ); 
@@ -38,6 +37,8 @@ recognition.onresult = function (input) {
     if (correctInputTime === ENOUGH_CORRECT_TIME) {
       goToNextRandomVocabulary();
     }
+  }else{
+    userVoiceTextHTML.innerText = "oh no, you said : " + userVoiceText;
   }
 }
 
