@@ -4,7 +4,10 @@ Visit this link to use software online: https://minhtuan29.github.io/english-voc
 This software cannot be used on mobile phones, forgive me.  
   
   
-You can use it to practice theory of anything else, such as : programming language, english language, theory of information security, "Toan Van Anh Ly Hoa Sinh Su Dia GDCD" theory    
+You can use it to practice theory of anything else, such as :  
+programming language, english language, theory of information security, "Toan Van Anh Ly Hoa Sinh Su Dia GDCD" theory  
+  
+  
 First, you should click on "hướng dẫn lần đầu sử dụng" to get how to use  
 ![232323](https://user-images.githubusercontent.com/86332370/146686750-2c29e8cb-3457-4b6d-98c0-f46506da4ccc.PNG)  
 
