@@ -32,4 +32,4 @@ After completing instruction, get back to menu
  # Author
 HOANG MINH TUAN
 # Advance in use
-you can use the software to study any thing, such as : programming language, english language, theory of anything else . . .
+you can use the software to study theory of anything else, such as : programming language, english language, theory of information security
