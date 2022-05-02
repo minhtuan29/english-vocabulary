@@ -31,3 +31,5 @@ After completing instruction, get back to menu
  [MIT License](https://github.com/minhtuan29/english-vocabulary/blob/master/LICENSE) Copyright (©) 2021 TuanHoang 
  # Author
 HOANG MINH TUAN
+# Advance in use
+you can use the software to study any thing, such as : programming language, english language, theory of anything else . . .
