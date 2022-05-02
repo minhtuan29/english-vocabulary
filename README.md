@@ -32,4 +32,4 @@ After completing instruction, get back to menu
  # Author
 HOANG MINH TUAN
 # Advance in use
-you can use the software to practice theory of anything else, such as : programming language, english language, theory of information security, "Toan Van Anh Ly Hoa Sinh Su Dia GDCD theory"
+You can use the software to practice theory of anything else, such as : programming language, english language, theory of information security, "Toan Van Anh Ly Hoa Sinh Su Dia GDCD theory"
