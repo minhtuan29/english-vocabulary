@@ -5,7 +5,7 @@ This software cannot be used on mobile phones, forgive me.
   
   
 You can use it to practice theory of anything else, such as :  
-programming language, English language, theory of information security, "Toan Van Anh Ly Hoa Sinh Su Dia GDCD" theory  
+programming language, English language, "Toan Van Anh Ly Hoa Sinh Su Dia GDCD" theory  
   
 # First use  
 First, you should click on "hướng dẫn lần đầu sử dụng" to get how to use  
