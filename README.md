@@ -2,7 +2,7 @@
 # A software for learning English 
 Visit this link to use software online: https://minhtuan29.github.io/english-vocabulary/  
 This software cannot be used on mobile phones, forgive me.  
-  
+You can use it to practice theory of anything else, such as : programming language, english language, theory of information security, "Toan Van Anh Ly Hoa Sinh Su Dia GDCD" theory    
 First, you should click on "hướng dẫn lần đầu sử dụng" to get how to use  
 ![232323](https://user-images.githubusercontent.com/86332370/146686750-2c29e8cb-3457-4b6d-98c0-f46506da4ccc.PNG)  
 
@@ -31,5 +31,3 @@ After completing instruction, get back to menu
  [MIT License](https://github.com/minhtuan29/english-vocabulary/blob/master/LICENSE) Copyright (©) 2021 TuanHoang 
  # Author
 HOANG MINH TUAN
-# Advance in use
-You can use the software to practice theory of anything else, such as : programming language, english language, theory of information security, "Toan Van Anh Ly Hoa Sinh Su Dia GDCD theory"
