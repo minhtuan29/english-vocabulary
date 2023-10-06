@@ -1,6 +1,6 @@
 
 # A software for learning English 
-Visit this link to use software online: https://myelsa.tk  
+Visit this link to use software online: https://minhtuan29.github.io/english-vocabulary_/  
 This software cannot be used on mobile phones, forgive me.  
   
   
@@ -31,7 +31,7 @@ After completing instruction, get back to menu
 - Down Key
 - Left Key
 - Right Key
-### Visit this link to use software online: https://minhtuan29.github.io/english-vocabulary/  
+### Visit this link to use software online: https://minhtuan29.github.io/english-vocabulary_/  
 # License
  [MIT License](https://github.com/minhtuan29/english-vocabulary/blob/master/LICENSE) Copyright (©) 2021 TuanHoang 
  # Author
